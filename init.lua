@@ -4,6 +4,7 @@ ocd.init = function( )
   local mods = {
     'farming',
     'default',
+    'mesecons',
     'flowers'
   }
   for i, mod in ipairs(mods) do
