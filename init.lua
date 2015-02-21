@@ -15,6 +15,9 @@ ocd.init = function( )
 end
 
 ocd.node = function ( node, nodebox )
+  if not minetest.registered_nodes[node] then
+    return false
+  end
   minetest.override_item( node, {
     drawtype = "nodebox",
     inventory_image = nil,
@@ -35,6 +38,9 @@ ocd.node = function ( node, nodebox )
 end
 
 ocd.node = function ( node, nodebox, texture )
+  if not minetest.registered_nodes[node] then
+    return false
+  end
   minetest.override_item( node, {
     drawtype = "nodebox",
     tiles = texture,
